@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/VeronicaSD.ico',
   organizationName: 'Despria', // Usually your GitHub org/user name.
   projectName: 'Despria.github.io', // Usually your repo name.
 
