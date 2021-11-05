@@ -46,7 +46,7 @@ const config = {
         title: 'Despria의 블로그',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/VeronicaSD.svg',
+          src: 'img/VeronicaSD.webp',
         },
         items: [
           {
