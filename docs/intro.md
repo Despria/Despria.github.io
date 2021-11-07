@@ -2,6 +2,9 @@
 sidebar_position: 1
 ---
 
-# Games
+# Documents
 
-게임 관련 글을 작성하는 곳입니다
+문서 보관함
+
+[프로그래밍 관련 글](Programming/programming_intro)<br />
+[게임 관련 글](Games/games_intro)
