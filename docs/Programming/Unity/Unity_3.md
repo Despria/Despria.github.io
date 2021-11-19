@@ -10,7 +10,8 @@ sidebar_position: 3
 
 ---
 
-# 객체 지향 프로그래밍 (OOP: Object-Oriented-Programming)
+# 객체 지향 프로그래밍 
+# (OOP: Object-Oriented-Programming)
 
 ## 객체 지향 프로그래밍이란?
 
