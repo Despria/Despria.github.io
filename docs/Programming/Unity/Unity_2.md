@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+tags: [C#, Unity]
 ---
 
 # Unity를 위한 기본 문법 2

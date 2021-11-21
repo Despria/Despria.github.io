@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+tags: [C#, Unity]
 ---
 
 # Unity를 위한 기본 문법 1
@@ -169,6 +170,8 @@ const는 상수를 생성할 때 사용한다.<br />
 ```C#
 const double PI = 3.141592;
 ```
+
+또한, const는 기본적으로 전역 변수(static)의 특징을 갖게 되니 참고하도록 하자.
 
 ---
 
