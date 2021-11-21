@@ -195,7 +195,7 @@ class Program
 ### 자료구조 간략 소개 - List, ArrayList, Hashtable, Dictionary
 
 위의 제네릭이나 인덱서를 기본적으로 사용하는 C#의 기본 클래스가 있는데, 그것은 바로 List 클래스이다.
-List 클래스와 같이 데이터를 구조적으로 정리, 표현해놓은 것을 일반적으로 **자료구조**라고 부른다.
+List 클래스와 같이 데이터를 구조적으로 정리, 표현해놓은 것을 일반적으로 **자료구조**, 또는 **컬렉션(Collection)**이라 부른다.
 C#은 객체 지향 언어이므로 이러한 자료구조도 전부 클래스로 표현하는 것 뿐이다.
 
 **List 클래스**는 배열과 유사한 자료형을 생성하는데, 그렇다면 굳이 번거롭게 클래스를 쓰지 않고 그냥 배열을 생성하면 되지 않냐고 물을 수 있을 것이다.
@@ -401,6 +401,136 @@ C#의 자료구조에는 이 외에도 연결 리스트(Linked List), 큐(Queue)
 ---
 
 ### Linq (CQRS-디자인패턴 내용을 약간 언급할지 말지?)
+
+Linq는 Language-Integrated Query의 약자로 컬렉션 형태의 데이터를 쉽게 다루고자 만들어진 구문이다.
+즉, Linq를 사용하면 위에서 다룬 List, Dictionary 등을 보다 간편하게 다룰 수 있는 것이다.
+여기서 Query, 즉 쿼리란 쉽게 말해서 데이터베이스에 정보를 요청하는 것이라고 보면 된다고 한다. 일종의 검색 행위라고 볼 수 있을 것 같다.
+
+Linq 구문은 from, in, where, orderby, select의 다섯 가지 키워드로 이루어진다고 간단하게 정리할 수 있겠다.
+Linq 구문의 예시를 적어본다면 아래와 같다.
+``using System.Linq`` 네임스페이스 선언이 필요하다.
+
+```C#
+using System.Linq;
+
+List<int> input = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+var output = from item in input 
+             where item % 2 == 0 
+             orderby item descending
+             select item;
+
+foreach (var item in output)
+    {
+        Console.WriteLine(item);
+    }
+
+// 실행 결과
+// 2
+// 4
+// 6
+// 8
+// 10
+```
+
+코드를 들여다보면 이해하기가 그닥 어렵지 않다고 느낄 것이다.
+이제부터 Linq의 구문을 하나하나 살펴보도록 하자.
+
+1. from - in - select
+
+Linq 구문은 **from**, **in**, **select**를 반드시 포함해야 한다.
+from은 컬렉션에서 요청할 정보를 담을 변수 이름을 지정하는 것이고, 
+in은 요청의 대상이 될 컬렉션을 의미한다고 보면 된다.
+또한 select는 해당 정보를 반환하는 구문이라고 보면 된다.
+
+간단히 표현하자면 다음과 같다.
+
+```C#
+from [변수 이름] in [컬렉션]
+select [변수 이름]
+```
+
+특히 select의 경우, **익명 객체**와 연관지어서 자주 쓰이곤 한다.
+익명 객체는 쉽게 말해서 1회용 클래스라고 보면 된다.
+단 한번밖에 안 쓰는것이 확실하다면 이를 위해 클래스를 쓰는 것은 오히려 자원의 낭비일 것이다.
+그럴 때 익명 객체를 활용하면 코드를 절약할 수 있다.
+
+```C#
+new { <속성> = <값>, <속성> = <값> ... }
+```
+
+Linq 구문과 연관지어서 작성한다면 다음과 같은 식으로 작성할 수 있다.
+
+```C#
+using System.Linq;
+
+List<int> input = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+var output = from item in input 
+             where item % 2 == 0  // 아래 2번 where 키워드를 참고하자
+             orderby item descending // 아래 3번 orderby 키워드를 참고하자
+             select new // 익명 객체 생성
+             {
+                 A = item + 1,
+                 B = item * item,
+                 C = 100
+             };
+
+foreach (var item in output)
+    {
+        Console.WriteLine(item.A);
+        Console.WriteLine(item.B);
+        Console.WriteLine(item.C);
+        Console.WriteLine();
+    }
+
+/* 실행 결과
+11
+100
+100
+
+9
+64
+100
+
+7
+36
+100
+
+5
+16
+100
+
+3
+4
+100
+*/
+```
+
+
+2. where
+
+where는 일종의 조건식 키워드라고 보면 된다.
+from - in 구문으로 어떤 컬렉션에서 요소를 검색할 지 정했다면, 그 다음 where를 통해 그 중 어떤 요소만 검색할 지를 정할 수 있다.
+
+```C#
+from [변수 이름] in [컬렉션]
+where [조건식]
+select [변수 이름]
+```
+
+3. orderby
+
+orderby는 말 그대로 어떻게 정렬할 지를 정하는 키워드이다.
+orderby [변수 이름] ascending으로 작성하면 오름차순으로, orderby [변수 이름] descending으로 작성하면 내림차순으로 정렬한다.
+이 때, orderby를 생략하면 자동으로 오름차순으로 정렬된다.
+
+```C#
+from [변수 이름] in [컬렉션]
+where [조건식]
+orderby [변수 이름] descending
+select [변수 이름]
+```
 
 ---
 
