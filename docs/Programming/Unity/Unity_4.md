@@ -400,7 +400,7 @@ C#의 자료구조에는 이 외에도 연결 리스트(Linked List), 큐(Queue)
 
 ---
 
-### Linq (CQRS-디자인패턴 내용을 약간 언급할지 말지?)
+### Linq
 
 Linq는 Language-Integrated Query의 약자로 컬렉션 형태의 데이터를 쉽게 다루고자 만들어진 구문이다.
 즉, Linq를 사용하면 위에서 다룬 List, Dictionary 등을 보다 간편하게 다룰 수 있는 것이다.
