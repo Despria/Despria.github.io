@@ -1231,4 +1231,4 @@ TestDelegate3<int, int> td2 = Minus;
 
 
 
-/// 델리게이터와 람다, 이벤트 작성 필요
+/// ref 키워드, 람다, 이벤트 작성 필요
