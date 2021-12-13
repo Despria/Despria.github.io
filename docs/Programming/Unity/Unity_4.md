@@ -401,18 +401,18 @@ C#의 자료구조에는 이 외에도 연결 리스트(Linked List), 큐(Queue)
 
 ---
 
-### Linq
+### LINQ
 
-Linq는 Language-Integrated Query의 약자로 컬렉션 형태의 데이터를 쉽게 다루고자 만들어진 구문이다.<br />
-즉, Linq를 사용하면 위에서 다룬 List, Dictionary 등을 보다 간편하게 다룰 수 있는 것이다.<br />
+LINQ는 Language-Integrated Query의 약자로 컬렉션 형태의 데이터를 쉽게 다루고자 만들어진 구문이다.<br />
+즉, LINQ를 사용하면 위에서 다룬 List, Dictionary 등을 보다 간편하게 다룰 수 있는 것이다.<br />
 여기서 Query, 즉 쿼리란 쉽게 말해서 데이터베이스에 정보를 요청하는 것이라고 보면 된다고 한다. <br />일종의 검색 행위라고 볼 수 있을 것 같다.
 
-Linq 구문은 from, in, where, orderby, select의 다섯 가지 키워드로 이루어진다고 간단하게 정리할 수 있겠다.<br />
-Linq 구문의 예시를 적어본다면 아래와 같다.<br />
+LINQ 구문은 from, in, where, orderby, select의 다섯 가지 키워드로 이루어진다고 간단하게 정리할 수 있겠다.<br />
+LINQ 구문의 예시를 적어본다면 아래와 같다.<br />
 ``using System.Linq`` 네임스페이스 선언이 필요하다.
 
 ```C#
-using System.Linq;
+using System.LINQ;
 
 List<int> input = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
@@ -435,11 +435,11 @@ foreach (var item in output)
 ```
 
 코드를 들여다보면 이해하기가 그닥 어렵지 않다고 느낄 것이다.<br />
-이제부터 Linq의 구문을 하나하나 살펴보도록 하자.
+이제부터 LINQ의 구문을 하나하나 살펴보도록 하자.
 
 1. from - in - select
 
-Linq 구문은 **from**, **in**, **select**를 반드시 포함해야 한다.<br />
+LINQ 구문은 **from**, **in**, **select**를 반드시 포함해야 한다.<br />
 from은 컬렉션에서 요청할 정보를 담을 변수 이름을 지정하는 것이고, <br />
 in은 요청의 대상이 될 컬렉션을 의미한다고 보면 된다.<br />
 또한 select는 해당 정보를 반환하는 구문이라고 보면 된다.
@@ -460,10 +460,10 @@ select [변수 이름]
 new { <속성> = <값>, <속성> = <값> ... }
 ```
 
-Linq 구문과 연관지어서 작성한다면 다음과 같은 식으로 작성할 수 있다.
+LINQ 구문과 연관지어서 작성한다면 다음과 같은 식으로 작성할 수 있다.
 
 ```C#
-using System.Linq;
+using System.LINQ;
 
 List<int> input = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
@@ -534,7 +534,9 @@ select [변수 이름]
 ```
 ---
 
-## out 키워드
+## out과 ref
+
+### out 키워드
 
 클래스 메서드를 다루다보면 반환값, 즉 return값이 없을때도 있기는 하지만, return값이 있는 경우도 많다.<br />
 하지만 return의 한계는 한 번에 하나의 값밖에 반환할 수 없다는 것이다.<br />
@@ -610,7 +612,38 @@ static void Main(string[] args)
 
 ---
 
-## ref 키워드
+### ref 키워드
+
+위의 out 키워드와 비슷한 역할을 하는 **ref 키워드**도 있다.
+ref 키워드는 C언어에서의 포인터와 비슷한 느낌으로 이해하면 될 것 같다.
+변수의 주소를 참조하여 서로 다른 지역에서도 변수를 그대로 사용할 수 있게 해준다.
+
+```C#
+public static void Plus(int x, ref int result)
+{
+    result += x;
+    return;
+}
+
+static void Main(string[] args)
+{
+    int num = 10;
+    Console.WriteLine(num);
+
+    Plus(10, ref num);
+    Console.WriteLine(num);
+}
+
+// 실행 결과
+// 10
+// 20
+```
+
+ref 키워드로 전달한 변수는 기존에 저장하고 있던 값을 그대로 이어받아서 사용하지만,
+out 키워드는 기존에 어떤 값을 저장하고 있던 변수라 해도 그 값을 무시한다는 차이점이 있다.
+
+그렇기 때문에 ref 키워드는 기존에 사용하는 값을 받아서 어떤 연산을 하는데에 주로 사용하며,
+out 키워드는 메서드에서 여러 개의 값을 한꺼번에 새로 만들어서 반환하는 용도로 주로 사용한다.
 
 ---
 
@@ -1221,14 +1254,82 @@ TestDelegate3<int, int> td2 = Minus;
 
 ### 람다 (Lambda)
 
-람다(Lambda)는 이름이 없는 함수, 즉 익명 메서드라고 볼 수 있다.<br />
-람다식의 형태를 사용하지 않아도 익명 메서드를 만들 수는 있지만, 람다식을 사용하는 것이 훨씬 간결한 표현이 가능하다.<br />
-람다는 특히 델리게이터와 연관지어 사용할 때 강력한 성능을 발휘한다.
+람다(Lambda)는 이름이 없는 함수, 즉 무명 메서드라고 볼 수 있다.<br />
+앞서 델리게이트에서 사용했듯이, 람다식의 형태를 사용하지 않아도 익명 메서드를 만들 수는 있다.<br />
+하지만 람다식을 사용하는 것이 훨씬 간결한 표현이 가능하다.<br />
+람다는 특히 델리게이터와 연관지어 사용할 때 강력한 성능을 발휘하며, 애초에 델리게이트와 함께 사용하는 경우가 대부분이다.
+델리게이트 외에는 앞서 언급한 LINQ에서도 람다식을 사용하면 좋은 표현이 가능하다.
+
+람다식은 이하와 같은 형태를 띈다.
+
+```C#
+(매개변수) => { 메서드 내용 }
+```
+
+람다식은 델리게이트와 함께 사용한다고 했다.
+델리게이트와 함께 사용하는 예시는 아래와 같다.
+
+```C#
+class Program
+{
+    public delegate int TestDelegate(int a, int b);
+
+    static void Main(string[] args)
+    {
+        TestDelegate d1 = (int a, int b) => a + b;
+
+        Console.WriteLine(d1(10, 20));
+    }
+}
+```
+
+아래와 같이 중괄호를 이용한 람다식도 가능하다.
+메서드를 작성하듯이 작성하면 아무 문제 없이 작성할 수 있다.
+
+```C#
+class Program
+{
+    public delegate int TestDelegate(int a, int b);
+
+    static void Main(string[] args)
+    {
+        TestDelegate d1 = (int a, int b) => 
+        {
+            int sum = a + b;
+            Console.WriteLine(sum);
+        }
+
+        d1(10, 20);
+    }
+}
+```
+
+또한, 람다식은 델리게이트와 같이 사용하기 때문에, 매개변수 자료형을 유추해주는 기능을 제공한다.
+즉, 위의 예시의 경우, TestDelegate 델리게이트가 int 자료형 두 개를 사용하기 때문에,
+람다식에서는 굳이 매개변수의 자료형을 명시하지 않고 아래와 같이 적어도 된다.
+
+```C#
+class Program
+{
+    public delegate int TestDelegate(int a, int b); //TestDelegate의 매개변수는 int형 두 개
+
+    static void Main(string[] args)
+    {
+        TestDelegate d1 = (a, b) => //TestDelegate를 사용하는 람다식 매개변수에서 자료형을 유추
+        {
+            int sum = a + b;
+            Console.WriteLine(sum);
+        }
+
+        d1(10, 20);
+    }
+}
+```
 
 ### 이벤트 (Event)
 
 이벤트(Event)는 특정한 일이 발생했을 때, 외부에 그 발생 사실을 전달하는 장치라고 볼 수 있다.
 
-
+ 
 
 /// ref 키워드, 람다, 이벤트 작성 필요
