@@ -8,10 +8,10 @@ sidebar_position: 1
 현재는 유니티 공부를 위한 C# 기초 문법을 정리하고 있습니다
 
 ## ``C#`` 기본 문법편
-[Unity를 위한 기본 문법 1](Unity/Unity_1)<br />
-[Unity를 위한 기본 문법 2](Unity/Unity_2)<br />
-[Unity를 위한 기본 문법 3](Unity/Unity_3)<br />
-[Unity를 위한 기본 문법 4](Unity/Unity_4)<br />
+[Unity를 위한 기본 문법 1](Unity/Unity_Basic_1)<br />
+[Unity를 위한 기본 문법 2](Unity/Unity_Basic_2)<br />
+[Unity를 위한 기본 문법 3](Unity/Unity_Basic_3)<br />
+[Unity를 위한 기본 문법 4](Unity/Unity_Basic_4)<br />
 
 ## AssetBundle 간단 정리
 [AssetBundle 빌드하기](Unity/AssetBundle_1)<br />

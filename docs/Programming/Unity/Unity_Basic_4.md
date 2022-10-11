@@ -58,7 +58,7 @@ class GenericExample<T>
 이러한 암묵적 약속은 협업을 할 때 매우 중요하므로 반드시 따르는 것이 좋다고 이곳저곳에서 강조되는 모습을 쉽게 볼 수 있다.
 
 사용 방법은 제네릭 식별자 위치인 T에 사용하고자 하는 자료형을 작성하는 것이다.<br />
-이를테면, 위의 GenericExample 클래스에 자료형 String을 사용하여 예를 들어보도록 하자.
+이를테면, 위nity의 GenericExample 클래스에 자료형 String을 사용하여 예를 들어보도록 하자.
 
 ```C#
 class Program
