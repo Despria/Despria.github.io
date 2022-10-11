@@ -77,6 +77,5 @@ BuildPipeline.BuildAssetBundles의 매개변수로는 첫번째로 우선 AssetB
 세 번째 매개변수인 BuildTarget은 빌드한 에셋번들을 사용하는 기기를 지정하는 것이다.<br />
 예를 들자면, 이렇게 빌드한 게임을 안드로이드에서 플레이한다면 BuildTarget.Android가 될 것이다.
 
-BuildAssetBundleOptions과 BuildTarget에 대해서 더 자세히 알아보려면 유니티 공식 문서 등을 참고하도록 하자.
-
+BuildAssetBundleOptions과 BuildTarget에 대해서 더 자세히 알아보려면 유니티 공식 문서 등을 참고하도록 하자. <br />
 [AssetBundle 빌드 옵션](https://docs.unity3d.com/kr/2021.1/Manual/AssetBundles-Building.html)

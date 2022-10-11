@@ -121,8 +121,8 @@ foreach (string dependency in dependencies)
 
 혹은 이와 같이 AssetBundleManifest API를 통해 AssetBundle간의 의존성을 파악하고 번들을 불러오는 것도 가능하다.
 
-[AssetBundle 빌드](AssetBundle_1) 에서 번들을 생성한 경로에는 해당 경로의 이름으로 된 파일이 생성된다. <br />
-즉, 이 예제의 경우에는 'Assets/AssetBundles'에는 AssetBundles와 AssetBundles.manifest가 생성되는데,<br />
+AssetBundle을 생성한 경로에는 AssetBundle 전체에 관한 정보가 담긴 파일이 생성된다. <br />
+즉, 이 예제의 경우에는 'Assets/AssetBundles'에 AssetBundles와 AssetBundles.manifest가 생성되는데,<br />
 이 AssetBundles.manifest를 통해 번들간의 의존성을 파악하고 에셋을 로딩하는 것이 가능하다.
 
 ```C#
@@ -175,7 +175,7 @@ Instantiate(cube);
 이렇게 하니 cube를 로딩할 때 이상하게 매터리얼이 제대로 로딩이 되지 않았다.
 
 다만 이것은 AssetBundle이 아니라 다른 문제에 의해서 그런 것일 수도 있다.<br />
-어떠한 문제인가 하면, [AssetBundle 빌드하기](AssetBundle_1) 에서 BuildTarget을 Android로 지정했는데,<br />
+어떠한 문제인가 하면, 앞서 BuildTarget을 Android로 지정했는데,<br />
 이런 경우, PC 에디터 환경에서는 AssetBundle로부터 매터리얼이 제대로 로딩이 되지 않는 현상이 있다고 한다.<br />
 그럴 때에는 'Build Setting - Player Setting'에서 아래와 같이 처리해주니 매터리얼이 제대로 적용되었다.
 
