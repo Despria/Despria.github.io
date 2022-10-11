@@ -183,3 +183,12 @@ Instantiate(cube);
 
 Auto Graphics for Windows를 체크 해제 후, OpenGLES3을 추가해 준 후 최상단으로 배치하면 에디터를 재시작하게 된다.<br />
 이후부터는 매터리얼이 제대로 적용되는 것을 볼 수 있었다.
+
+
+### AssetBundle 관련 참고 자료
+
+유니티 에반젤리스트 오지현님의 2017년도 Unite Seoul 강연을 참고하면 좋다.
+[Unite Seoul 2017 에셋번들이 번들번들 : 에셋번들 실용 가이드](https://www.youtube.com/watch?v=Z9LrkQUDzJw)
+
+또한 2018년도 Unite Seoul의 에셋번들 실전 가이드 강연도 참고하면 좋다.
+[Unite Seoul 2018 에셋번들 실전 가이드](https://www.youtube.com/watch?v=Lx61ZEKEvnQ)
