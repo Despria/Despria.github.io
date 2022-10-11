@@ -100,7 +100,7 @@ AssetBundle materials = LoadFromMemoryAsync("cube/materials");
 ```
 
 위의 코드를 생략하여 매터리얼을 불러오지 않았다면, 큐브 프리팹은 생성은 되지만 매터리얼이 존재하지 않아 마젠타색으로 나타날 것이다.<br />
-즉, AssetBundle 간의 의존성(Dependency)을 잘 파악하여, 상황마다 필요한 AssetBundle을 미리 준비해놓는 것이 중요하다.<br />
+즉, AssetBundle 간의 **의존성(Dependency)**을 잘 파악하여, 상황마다 필요한 AssetBundle을 미리 준비해놓는 것이 중요하다.<br />
 AssetBundle 간의 의존성은 Inspector 상에서도 확인할 수 있다.
 
 ![AssetBundle Dependency](Images/assetbundle6.png)
@@ -187,8 +187,8 @@ Auto Graphics for Windows를 체크 해제 후, OpenGLES3을 추가해 준 후 �
 
 ### AssetBundle 관련 참고 자료
 
-유니티 에반젤리스트 오지현님의 2017년도 Unite Seoul 강연을 참고하면 좋다.
+유니티 에반젤리스트 오지현님의 2017년도 Unite Seoul 강연을 참고하면 좋다.<br />
 [Unite Seoul 2017 에셋번들이 번들번들 : 에셋번들 실용 가이드](https://www.youtube.com/watch?v=Z9LrkQUDzJw)
 
-또한 2018년도 Unite Seoul의 에셋번들 실전 가이드 강연도 참고하면 좋다.
+또한 2018년도 Unite Seoul의 에셋번들 실전 가이드 강연도 참고하면 좋다.<br />
 [Unite Seoul 2018 에셋번들 실전 가이드](https://www.youtube.com/watch?v=Lx61ZEKEvnQ)
