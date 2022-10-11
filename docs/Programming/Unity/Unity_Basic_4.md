@@ -412,7 +412,7 @@ LINQ 구문의 예시를 적어본다면 아래와 같다.<br />
 ``using System.Linq`` 네임스페이스 선언이 필요하다.
 
 ```C#
-using System.LINQ;
+using System.Linq;
 
 List<int> input = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
@@ -439,7 +439,6 @@ foreach (var item in output)
 
 1. from - in - select
 
-LINQ 구문은 **from**, **in**, **select**를 반드시 포함해야 한다.<br />
 from은 컬렉션에서 요청할 정보를 담을 변수 이름을 지정하는 것이고, <br />
 in은 요청의 대상이 될 컬렉션을 의미한다고 보면 된다.<br />
 또한 select는 해당 정보를 반환하는 구문이라고 보면 된다.
@@ -463,7 +462,7 @@ new { <속성> = <값>, <속성> = <값> ... }
 LINQ 구문과 연관지어서 작성한다면 다음과 같은 식으로 작성할 수 있다.
 
 ```C#
-using System.LINQ;
+using System.Linq;
 
 List<int> input = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
@@ -1332,4 +1331,4 @@ class Program
 
  
 
-/// ref 키워드, 람다, 이벤트 작성 필요
+/// 이벤트 작성 필요
