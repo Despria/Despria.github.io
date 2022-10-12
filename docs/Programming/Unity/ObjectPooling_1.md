@@ -245,7 +245,7 @@ Release()의 경우도 비슷한데, 풀에 남아있는 공간이 있는 상태
 위의 그림같은 경우, 오브젝트 B와 C는 풀에 자리가 없으므로 파괴되는 것이다.
 
 그러면 이제 UnityEngine.Pool을 사용하여 실제로 오브젝트 풀링을 구현한 코드를 보도록 하자.<br /> 
-우선 이재민님의 영상에서 나오는 UnityEngine.Pool을 활용한 예제 코드는 아래와 같다.
+우선 이재민님의 영상에서 나오는 UnityEngine.Pool을 활용한 예제 코드는 아래와 같다.<br />
 영상 2편 설명란에 샘플 프로젝트를 다운받을 수 있는 링크가 올라와 있으니 직접 프로젝트를 열어보는 것도 좋다.
 
 ```C#
@@ -306,16 +306,16 @@ public class HatCreator : MonoBehaviour
 }
 ```
 
-위의 코드는 오브젝트 풀을 구현하는 코드이다.
-UnityEngine.Pool에서 제공하는 오브젝트 풀을 생성하기 위해서는 5가지 매개변수를 넘겨줘야 한다.
+위의 코드는 오브젝트 풀을 구현하는 코드이다.<br />
+UnityEngine.Pool에서 제공하는 오브젝트 풀을 생성하기 위해서는 5가지 매개변수를 넘겨줘야 한다.<br />
 그것이 바로 위의 Start에서 볼 수 있는 createFunc, actionOnGet, actionOnRelease, actionOnDestroy, maxSize이다.
 
-**createFunc**는 오브젝트 풀에 오브젝트가 없을 시 생성할 오브젝트를 반환하도록 하면 된다.
-**actionOnGet**은 풀에서 Get()을 호출 시 동작하며, **actionOnRelease**는 반대로 Release()를 호출 시 동작하는 내용이다.
-**actionOnDestroy**는 풀에 자리가 없을 경우의 오브젝트에 대한 처리라고 볼 수 있다.
+**createFunc**는 오브젝트 풀에 오브젝트가 없을 시 생성할 오브젝트를 반환하도록 하면 된다.<br />
+**actionOnGet**은 풀에서 Get()을 호출 시 동작하며, **actionOnRelease**는 반대로 Release()를 호출 시 동작하는 내용이다.<br />
+**actionOnDestroy**는 풀에 자리가 없을 경우의 오브젝트에 대한 처리라고 볼 수 있다.<br />
 **maxSize**는 해당 오브젝트 풀의 사이즈를 지정하는 것이다. 위의 예제에서는 30개의 오브젝트를 담도록 만들어졌다.
 
-CreateHat 메서드는 오브젝트 풀에서 생성되는 hat 오브젝트의 position과 rotation을 지정하고,
+CreateHat 메서드는 오브젝트 풀에서 생성되는 hat 오브젝트의 position과 rotation을 지정하고,<br />
 오브젝트 풀의 Get()을 통해 오브젝트를 생성하거나, 또는 풀에서 가져오는 동작을 수행한다.
 
 ```C#
@@ -355,11 +355,11 @@ public class Hat : MonoBehaviour
 }
 ```
 
-위의 Hat 클래스는 오브젝트 풀에서 꺼내지는 오브젝트 hat에 부착된 스크립트의 클래스이다.
-단순한 기능을 수행하는데, 여기서 눈여겨봐야 할 점은 IObjectPool형 변수인 poolToReturn이다.
-해당 오브젝트는 OnCollisionEnter와 DestroyHat 코루틴에서 볼 수 있듯이,
-땅에 닿을 경우, 3초 후에 풀로 돌아가는 동작을 수행하는데, 이를 위해 poolToReturn을 선언하고,
-HatCreator에서 오브젝트 풀을 선언할 때 createFunc에서 해당 풀을 지정해주도록 하는 것이다.
+위의 Hat 클래스는 오브젝트 풀에서 꺼내지는 오브젝트 hat에 부착된 스크립트의 클래스이다.<br />
+단순한 기능을 수행하는데, 여기서 눈여겨봐야 할 점은 IObjectPool형 변수인 poolToReturn이다.<br />
+해당 오브젝트는 OnCollisionEnter와 DestroyHat 코루틴에서 볼 수 있듯이,<br />
+땅에 닿을 경우, 3초 후에 풀로 돌아가는 동작을 수행하는데, 이를 위해 poolToReturn을 선언하고,<br />
+HatCreator에서 오브젝트 풀을 선언할 때 createFunc에서 해당 풀을 지정해주도록 하는 것이다.<br />
 이를 통해 hat 오브젝트들은 생성될 시 돌아가야 할 풀을 기억하고 있을 수 있다.
 
 
@@ -446,24 +446,24 @@ public class ObjectPooler : MonoBehaviour
 }
 ```
 
-이 클래스는 Dictionary와 List를 통해 여러 개의 오브젝트 풀을 동시에 사용할 수 있도록 해준다.
-우선, System.Serializable 속성이 붙은 Pool 클래스가 있다.
-이는 유니티 에디터 상에서 Pool 클래스의 public 또는 serialized 속성이 붙은 멤버에 접근할 수 있도록 해준다.
-이를 통해 에디터 상에서 Pool형을 담을 수 있는 List인 pools에 오브젝트 풀로 만들 오브젝트들을 설정해주면 된다.
-풀에 담을 오브젝트의 프리팹, 그리고 오브젝트를 불러올 때 쓸 태그와 풀의 사이즈를 지정해준다.
+이 클래스는 Dictionary와 List를 통해 여러 개의 오브젝트 풀을 동시에 사용할 수 있도록 해준다.<br />
+우선, System.Serializable 속성이 붙은 Pool 클래스가 있다.<br />
+이는 유니티 에디터 상에서 Pool 클래스의 public 또는 serialized 속성이 붙은 멤버에 접근할 수 있도록 해준다.<br />
+이를 통해 에디터 상에서 Pool형을 담을 수 있는 List인 pools에 오브젝트 풀로 만들 오브젝트들을 설정해주면 된다.<br />
+풀에 담을 오브젝트의 프리팹, 그리고 오브젝트를 불러올 때 쓸 태그와 풀의 사이즈를 지정해준다.<br />
 태그는 Dictionary로부터 그에 해당하는 오브젝트 풀을 찾아야 하기 때문에 설정하는 것이다.
 
-이렇게 설정하고 에디터를 플레이모드로 실행하면, poolDictionary가 초기화 된 후,
-pools List에 있는 Pool 클래스의 수만큼 Queue가 생성되고, 
-해당 Queue에 Pool의 size만큼 Pool에 지정해둔 prefab을 담는다.
+이렇게 설정하고 에디터를 플레이모드로 실행하면, poolDictionary가 초기화 된 후,<br />
+pools List에 있는 Pool 클래스의 수만큼 Queue가 생성되고, <br />
+해당 Queue에 Pool의 size만큼 Pool에 지정해둔 prefab을 담는다.<br />
 그리고 poolDictionary로부터 해당 풀을 찾을 수 있도록, Pool 클래스의 tag와 오브젝트 풀을 한 쌍으로 묶어 추가한다.
 
-SpawnFromPool은 Dictionary로부터 오브젝트 풀을 찾고, 그로부터 오브젝트를 꺼내오는 메서드이다.
-우선 매개변수로 문자열, Vector3, Quaternion을 받는다.
-문자열을 받는 이유는 태그 이름을 찾아 해당하는 오브젝트 풀을 찾기 위함이다.
+SpawnFromPool은 Dictionary로부터 오브젝트 풀을 찾고, 그로부터 오브젝트를 꺼내오는 메서드이다.<br />
+우선 매개변수로 문자열, Vector3, Quaternion을 받는다.<br />
+문자열을 받는 이유는 태그 이름을 찾아 해당하는 오브젝트 풀을 찾기 위함이다.<br />
 Vector3와 Quaternion은 꺼낸 오브젝트의 position과 rotation을 설정하기 위한 매개변수이다.
 
-이 예제에서 오브젝트 풀에 들어갈 오브젝트들은 모두 IPooledObject 인터페이스를 상속받는다.
+이 예제에서 오브젝트 풀에 들어갈 오브젝트들은 모두 IPooledObject 인터페이스를 상속받는다.<br />
 IPooledObject는 아래와 같이 OnObjectSpawn() 하나만을 구현하면 되는 단순한 인터페이스이다.
 
 ```C#
@@ -473,14 +473,14 @@ public interface IPooledObject
 }
 ```
 
-Dictionary에서 tag에 해당하는 풀이 있음을 확인하면,
-해당 풀에서 오브젝트를 하나 Dequeue로 꺼내온 후 활성화하고, position과 rotation을 지정해준다.
-그 다음, 생성된 각 오브젝트에서 따로 수행해야 할 일이 있다면, 
+Dictionary에서 tag에 해당하는 풀이 있음을 확인하면,<br />
+해당 풀에서 오브젝트를 하나 Dequeue로 꺼내온 후 활성화하고, position과 rotation을 지정해준다.<br />
+그 다음, 생성된 각 오브젝트에서 따로 수행해야 할 일이 있다면, <br />
 이는 IPooledObject를 구현하는 OnObjectSpawn()에서 실행하도록 한다.
 
-마지막으로, 이 예제에서는 큐에서 꺼낸 오브젝트에서 OnObjectSpawn()을 실행하고 바로 다시 큐에 집어넣도록 하고 있다.
+마지막으로, 이 예제에서는 큐에서 꺼낸 오브젝트에서 OnObjectSpawn()을 실행하고 바로 다시 큐에 집어넣도록 하고 있다.<br />
 즉, 오브젝트는 작동 중이지만, 그와 동시에 큐로 바로 다시 들어와 있는 상태인 것이다.
 
-이 예제의 경우, 여러 개의 오브젝트 풀을 한번에 에디터를 통해 설정할 수 있다는 점에서는 매우 편리했지만,
-위의 두 예제와는 다르게 오브젝트의 개수가 유동적이지 않았다. 즉, 풀이 지정한 개수 이상으로 생성이 불가능하다.
+이 예제의 경우, 여러 개의 오브젝트 풀을 한번에 에디터를 통해 설정할 수 있다는 점에서는 매우 편리했지만,<br />
+위의 두 예제와는 다르게 오브젝트의 개수가 유동적이지 않았다. 즉, 풀이 지정한 개수 이상으로 생성이 불가능하다.<br />
 물론 이 점은 사용하는 사람에 따라서 코드를 약간만 본인의 용도에 맞게 수정하면 쉽게 해결되는 문제이다.
