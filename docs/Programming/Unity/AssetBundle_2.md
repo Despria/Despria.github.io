@@ -173,8 +173,10 @@ Instantiate(cube);
 
 참고로 덧붙이자면, 처음에는 cube 프리팹에 사용할 매터리얼과 cube 프리팹들 전부를 그냥 하나의 cube라는 이름을 가진 번들로 묶었는데<br />
 이렇게 하니 cube를 로딩할 때 이상하게 매터리얼이 제대로 로딩이 되지 않았다.
+분명 같은 번들 안에 묶여있기 때문에, 번들이 로딩된다면 필요한 에셋이 모두 로딩된 것일텐데
+혹시 번들을 분할하여 필요한 에셋들을 순차적으로 로딩해줘야 하는것인가 하는 생각이 들었다.
 
-다만 이것은 AssetBundle이 아니라 다른 문제에 의해서 그런 것일 수도 있다.<br />
+그러나 다른 사람들의 사례를 확인해보니, 이것은 번들의 로딩 순서가 아니라 다른 문제에 의해서 그런 것이었다.<br />
 어떠한 문제인가 하면, 앞서 BuildTarget을 Android로 지정했는데,<br />
 이런 경우, PC 에디터 환경에서는 AssetBundle로부터 매터리얼이 제대로 로딩이 되지 않는 현상이 있다고 한다.<br />
 그럴 때에는 'Build Setting - Player Setting'에서 아래와 같이 처리해주니 매터리얼이 제대로 적용되었다.
@@ -182,13 +184,16 @@ Instantiate(cube);
 ![Player Setting](Images/assetbundle7.png)
 
 Auto Graphics for Windows를 체크 해제 후, OpenGLES3을 추가해 준 후 최상단으로 배치하면 에디터를 재시작하게 된다.<br />
-이후부터는 매터리얼이 제대로 적용되는 것을 볼 수 있었다.
+이후부터는 매터리얼이 제대로 적용되는 것을 볼 수 있었다.<br />
+Windows가 아닌 다른 플랫폼의 경우에도 비슷하게 문제를 해결할 수 있지 않을까 싶다.
 
 
 ### AssetBundle 관련 참고 자료
 
 유니티 에반젤리스트 오지현님의 2017년도 Unite Seoul 강연을 참고하면 좋다.<br />
-[Unite Seoul 2017 에셋번들이 번들번들 : 에셋번들 실용 가이드](https://www.youtube.com/watch?v=Z9LrkQUDzJw)
+[Unite Seoul 2017 에셋번들이 번들번들 : 에셋번들 실용 가이드](https://www.youtube.com/watch?v=Z9LrkQUDzJw)<br />
+다만, 해당 강연의 경우 아무래도 2017년도 강의이기 때문에, AssetBundle의 기본 지식을 쌓는 데에는 유용하지만<br />
+해당 강연을 통해서 AssetBundle에 대한 기본적인 지식을 갖춘 후, 최신 블로그 글 등을 한번 살펴보는 것이 좋다.
 
 또한 2018년도 Unite Seoul의 에셋번들 실전 가이드 강연도 참고하면 좋다.<br />
 [Unite Seoul 2018 에셋번들 실전 가이드](https://www.youtube.com/watch?v=Lx61ZEKEvnQ)
