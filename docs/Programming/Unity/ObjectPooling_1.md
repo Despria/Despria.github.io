@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-tags: [C#, Unity, AssetBundle]
+tags: [C#, Unity, Object Pooling]
 ---
 
 # Object Pooling
