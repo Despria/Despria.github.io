@@ -202,6 +202,7 @@ HeroController의 RemoveBullet()을 호출하여 오브젝트 풀로 되돌아�
 ### 2. UnityEngine.Pool을 통한 Object Pooling 구현
 
 [retr0 - 유니티 오브젝트 풀링 1/2](https://www.youtube.com/watch?v=v-p0o9KavkI)
+
 [retr0 - 유니티 오브젝트 풀링 2/2](https://www.youtube.com/watch?v=0AFb2hizXVU)
 
 유명한 유니티 입문서인 '레트로의 유니티 게임 프로그래밍 에센스'의 저자이신 retr0 이재민님의 영상에서 배운 내용이다.<br /> 
