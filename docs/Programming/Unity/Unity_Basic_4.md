@@ -1327,8 +1327,126 @@ class Program
 
 ### 이벤트 (Event)
 
-이벤트(Event)는 특정한 일이 발생했을 때, 외부에 그 발생 사실을 전달하는 장치라고 볼 수 있다.
+이벤트(Event)는 특정한 사건이 발생했을 때, 외부에 그 발생 사실을 전달하는 장치라고 볼 수 있다.<br />
+위에서 언급한 델리게이트와 같이 사용한다.
 
- 
+예제는 아래와 같다.<br />
+해당 예제는 '공돌창고'님의 블로그에서 배운 내용임을 미리 밝힌다.<br />
+[공돌참고님의 블로그](https://hijuworld.tistory.com/42)
 
-/// 이벤트 작성 필요
+```C#
+// 이벤트 게시자 클래스
+class GUI
+{
+    public event EventHandler OKButtonClickHandler;
+    public void OKButtonClick()
+    {
+        if (OKButtonClickHandler != null)
+        {
+            OKButtonClickHandler(this, EventArgs.Empty);
+        }
+    }
+}
+```
+
+위 이벤트 게시자 클래스 GUI의 작동 방식은 아래와 같다. <br />
+그리고 게시자 클래스인 GUI 내부에 이벤트 EventHandler를 선언했다.<br />
+EventHandler는 기본적으로 제공되는 이벤트인데, 실제 모습은 이렇다.
+
+```C#
+public delegate void EventHandler(object sender, EventArgs e);
+```
+
+위의 모습을 보면 알 수 있듯이, EventHandler는 결국 void형 델리게이트이다.<br />
+EventHandler를 쓰지 않고 스스로 필요한 델리게이트를 선언해서 써도 상관없다.<br />
+EventHandler의 반환형이나 매개변수가 본인에게 알맞는 것이 아니라면 말이다.
+
+게시자 클래스 GUI에는 메서드 OKButtonClick()가 있는데,<br />
+이 메서드는 만약 이벤트에 구독자가 있다면 (OKButtonClickHandler가 null이 아니라면)<br />
+이벤트가 발생했다고 구독자들에게 알려주게끔 되어있다.
+
+```C#
+// 이벤트 구독자 클래스
+class Program
+{
+    static void Main(string[] args)
+    {
+        GUI gui = new GUI();
+
+        gui.OKButtonClickHandler += Gui_OKButtonClickHandler;
+
+        gui.OKButtonClick();
+        gui.OKButtonClick();
+        gui.OKButtonClick();
+    }
+
+    static void Gui_OKButtonClickHandler(Object sender, EventArgs e)
+    {
+        Console.WriteLine("OK Button Click!");
+    }
+}
+```
+
+그러면 이제 어떻게 이벤트를 구독하고, 실제로 사용하는 지 예제를 살펴보자.<br />
+이벤트를 구독하는 클래스 Program의 Main에서 GUI 클래스를 생성한다.<br />
+그리고 GUI클래스의 OKButtonClickHandler에 += 연산자로 메서드 Gui_OKButtonClickHandler를 추가했다.<br />
+당연히 Gui_OKButtonClickHandler는 EventHandler와 동일한 반환형 및 매개변수를 지녀야 한다.
+
+그리고 gui.OKButtonClick()을 실행하면, OKButtonClickHandler에 추가된 Gui_OKButtonClickHandler가 실행된다.
+
+```C#
+gui.OKButtonClickHandler -= Gui_OKButtonClickHandler;
+```
+또한 += 연산자로 추가하는것과 비슷하게, -= 연산자로 등록된 메서드를 다시 제거하는 것도 가능하다.
+
+마지막으로, 위의 예제에서 이벤트 게시자 GUI 클래스의 EventHandler는 public으로 선언되어 있다.<br />
+이는 구독자 클래스에서 접근하게 하기 위함인데,<br />
+마치 속성(Property)의 get과 set처럼 이벤트 또한 private으로 선언하면서 접근하는 방법이 존재한다.<br />
+그것이 바로 add와 remove이다.
+
+```C#
+class GUI
+{
+    private EventHandler _okButtonClickHandler;
+    public event EventHandler OkButtonClickHandler 
+    {
+        add
+        {
+            _okButtonClickHandler += value;
+        }
+        remove
+        {
+            _okButtonClickHandler -= value;
+        }
+    }
+    public void OkButtonClick()
+    {
+        if (_okButtonClickHandler != null )
+            _okButtonClickHandler(this, EventArgs.Empty);
+    }
+}
+```
+
+위와 같이 실제로 작동하는 델리게이트인 _okButtonClickHandler는 private으로 두고,<br />
+public event이면서 같은 델리게이트인 OkButtonClickHandler에서 add와 remove를 통해 등록된 함수를 넘겨주는 것이다.
+
+```C#
+class Program
+{
+    static void Main()
+    {
+        GUI gui = new GUI();
+        gui.OKButtonClickHandler += Gui_OKButtonClickHandler;
+        gui.OKButtonClickHandler += () => Console.WriteLine("OK Button Click 2!");
+
+        gui.OKButtonClick();
+    }
+
+    static void Gui_OKButtonClickHandler(Object sender, EventArgs e)
+    {
+        Console.WriteLine("OK Button Click!");
+    }
+}
+```
+
+사용은 그대로 +=와 -= 연산자를 통해 사용할 수 있다.
