@@ -22,4 +22,4 @@ sidebar_position: 1
 [Object Pooling](Unity/ObjectPooling_1.md)<br />
 
 ## Programmers ``C#`` 문제 풀이
-[Level1_크기가 다른 문자열](Programmers/lv1_%ED%81%AC%EA%B8%B0%EA%B0%80%20%EB%8B%A4%EB%A5%B8%20%EB%AC%B8%EC%9E%90%EC%97%B4.md)<br />
+[Level1. 크기가 다른 문자열](Programmers/lv1_%ED%81%AC%EA%B8%B0%EA%B0%80%20%EB%8B%A4%EB%A5%B8%20%EB%AC%B8%EC%9E%90%EC%97%B4.md)<br />
