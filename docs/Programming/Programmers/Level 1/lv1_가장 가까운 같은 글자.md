@@ -28,6 +28,8 @@ a는 자신보다 두 칸, 네 칸 앞에 a가 있습니다. 이 중 가까운 �
 ## 풀이
 
 ```c#
+using System;
+
 public class Solution
 {
     public int[] solution(string s)

@@ -23,5 +23,5 @@ sidebar_position: 1
 
 ## Programmers ``C#`` 문제 풀이
 [Level1. 크기가 다른 문자열](Programmers/Level%201/lv1_%ED%81%AC%EA%B8%B0%EA%B0%80%20%EB%8B%A4%EB%A5%B8%20%EB%AC%B8%EC%9E%90%EC%97%B4.md)<br />
-[Level1. 가장 가까운 같은 글자](Programmers/Level%201/lv1_%EA%B0%80%EC%9E%A5%20%EA%B0%80%EA%B9%8C%EC%9A%B4%20%EA%B0%99%EC%9D%80%20%EA%B8%80%EC%9E%90.md)
-[Level1. 문자열 나누기](Programmers/Level%201/lv1_%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%82%98%EB%88%84%EA%B8%B0.md)
+[Level1. 가장 가까운 같은 글자](Programmers/Level%201/lv1_%EA%B0%80%EC%9E%A5%20%EA%B0%80%EA%B9%8C%EC%9A%B4%20%EA%B0%99%EC%9D%80%20%EA%B8%80%EC%9E%90.md)<br />
+[Level1. 문자열 나누기](Programmers/Level%201/lv1_%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%82%98%EB%88%84%EA%B8%B0.md)<br />

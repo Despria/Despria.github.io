@@ -25,6 +25,8 @@ s에서 분리한 문자열을 빼고 남은 부분에 대해서 이 과정을 �
 ## 풀이
 
 ```c#
+using System;
+
 public class Solution
 {
     int answer = 0;

@@ -20,6 +20,10 @@ sidebar_position: 0
 ## 풀이
 
 ```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 public class Solution
 {
     public int solution(string t, string p)
@@ -85,7 +89,3 @@ t에서 랜덤한 문자를 뽑아서 숫자를 만드는 것이 아니라 연�
 코드 테스트용으로 집어넣는 문자열의 크기가 큰 편인지 partialNumber와 p를 정수로 변환할 때 <br />
 int형 변수로는 전부 커버가 안되는 문제가 있어서 테스트 케이스에서 정확도가 떨어져 통과를 못했다. <br />
 그래서 long형 변수를 사용하니 문제없이 테스트를 통과했다.
-
-여담이지만 프로그래머스 사이트의 컴파일러는 닷넷 버전이 낮은지, <br />
-문자열 t를 리스트로 변환하려 할 때 VS에서는 t.ToList()를 썼는데, 프로그래머스 사이트에서는 그게 안되더라. <br />
-그래서 저런 식으로 하나씩 리스트에 추가했다...
