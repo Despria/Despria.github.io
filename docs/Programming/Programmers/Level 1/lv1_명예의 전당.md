@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Level 1 - 명예의 전당(1)
+# Level 1 - 명예의 전당
 
 ## 문제
 
