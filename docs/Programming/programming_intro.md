@@ -28,3 +28,5 @@ sidebar_position: 1
 [Level1. 명예의 전당](Programmers/Level%201/lv1_%EB%AA%85%EC%98%88%EC%9D%98%20%EC%A0%84%EB%8B%B9.md)<br />
 [Level1. 기사단원의 무기](Programmers/Level%201/lv1_%EA%B8%B0%EC%82%AC%EB%8B%A8%EC%9B%90%EC%9D%98%20%EB%AC%B4%EA%B8%B0.md)<br />
 [Level1. 과일 장수](Programmers/Level%201/lv1_%EA%B3%BC%EC%9D%BC%20%EC%9E%A5%EC%88%98.md)<br />
+[Level1. 푸드 파이트 대회](Programmers/Level%201/lv1_%ED%91%B8%EB%93%9C%20%ED%8C%8C%EC%9D%B4%ED%8A%B8%20%EB%8C%80%ED%9A%8C.md)<br />
+[Level1. 햄버거 만들기](Programmers/Level%201/lv1_%ED%96%84%EB%B2%84%EA%B1%B0%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)<br />

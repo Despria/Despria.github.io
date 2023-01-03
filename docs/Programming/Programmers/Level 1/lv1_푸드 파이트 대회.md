@@ -40,7 +40,8 @@ sidebar_position: 6
 using System;
 using System.Linq;
 
-public class Solution {
+public class Solution 
+{
     public string solution(int[] food)
     {
         string foodAllocated = "";
