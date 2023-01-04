@@ -77,11 +77,11 @@ public class Solution
 
 이번 문제도 간단한 편이었지만, 처음에는 다른 방법을 생각하다가 좀 꼬여버려서 시간이 약간 걸렸다.<br />
 food 배열에는 각 칼로리별 음식의 수량이 주어지는데, 0번 인덱스는 항상 물을 지정하며 1만 담긴다.<br />
-배열의 인덱스 i는 음식의 칼로리, food``[i]``는 해당 음식의 개수를 의미한다.<br />
+배열의 인덱스 i는 음식의 칼로리, food[i]는 해당 음식의 개수를 의미한다.<br />
 나머지 요소에서 음식을 나누어 분배하면 된다.
 
 이 때, 음식의 개수가 홀수라면 양쪽에 공평하게 나누어 주지 못하게 되므로, 홀수인 경우는 1을 뺀다.<br />
-그 다음, food``[i]``의 수만큼 foodAllocatedHalf에 i.ToString()을 더해주었다.<br />
+그 다음, food[i]의 수만큼 foodAllocatedHalf에 i.ToString()을 더해주었다.<br />
 이러면 왼쪽부터 시작하는 참가자가 먹는 음식이 순서대로 배치되게 된다.
 
 그 다음, foodAllocatedHalf를 거꾸로 뒤집은 char형 배열인 foodAllocatedOtherHalf을 만들어 준다.<br />

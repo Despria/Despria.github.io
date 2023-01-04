@@ -27,7 +27,7 @@ sidebar_position: 5
 1. 3 ≤ k ≤ 9
 2. 3 ≤ m ≤ 10
 3. 7 ≤ score의 길이 ≤ 1,000,000
-- 1 ≤ score``[i]`` ≤ k
+- 1 ≤ score[i] ≤ k
 4. 이익이 발생하지 않는 경우에는 0을 return 해주세요.
 
 ## 풀이
