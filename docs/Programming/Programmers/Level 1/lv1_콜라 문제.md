@@ -42,24 +42,25 @@ sidebar_position: 9
 ```c#
 using System;
 
-public class Solution {
+public class Solution
+{
     public int solution(int a, int b, int n)
     {
-        int totalNumberOfCoke = 0;
+        int cokeTotalNumber = 0;
 
         while (n >= a)
         {
-            int cokeToReceive = (n / a) * b;
-            int leftoverCoke = 0;
+            int cokeReceive = (n / a) * b;
+            int cokeLeft = 0;
 
             if (n % a != 0)
-                leftoverCoke = n % a;
+                cokeLeft = n % a;
 
-            totalNumberOfCoke += cokeToReceive;
-            n = cokeToReceive + leftoverCoke;
+            cokeTotalNumber += cokeReceive;
+            n = cokeReceive + cokeLeft;
         }
 
-        return totalNumberOfCoke;
+        return cokeTotalNumber;
     }
 }
 ```
