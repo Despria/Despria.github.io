@@ -77,9 +77,9 @@ public class Solution
 이를 위해 while문을 사용해서, 조건을 n >= a로 설정했다.<br/>
 n == a라면 마지막으로 b개의 콜라를 반환받고 while문을 나오게 될 것이다.
 
-while문 내부에서는 이번에 받을 수 있는 콜라의 개수 cokeToReceive 변수를 선언하여 n / a * b를 대입해준다.<br/>
+while문 내부에서는 이번에 받을 수 있는 콜라의 개수 cokeReceive 변수를 선언하여 n / a * b를 대입해준다.<br/>
 n이 a로 나누어 떨어지지 않는 경우, 남은 콜라는 다음에 쓸 수 있으므로 <br/>
-해당 콜라를 저장할 leftoverCoke를 선언하여 나머지를 저장해준다.
+해당 콜라를 저장할 cokeLeft 선언하여 나머지를 저장해준다.
 
-그 후, 총 콜라의 개수인 totalNumberOfCoke에 cokeToReceive를 더해주고,<br/>
-n에는 이번에 받은 콜라와 남은 콜라, 즉 cokeToReceive와 leftoverCoke를 더해서 다시 while문으로 돌아간다.
+그 후, 총 콜라의 개수인 cokeTotalNumber cokeReceive를 더해주고,<br/>
+n에는 이번에 받은 콜라와 남은 콜라, 즉 cokeReceive를 cokeLeft 더해서 다시 while문으로 돌아간다.
