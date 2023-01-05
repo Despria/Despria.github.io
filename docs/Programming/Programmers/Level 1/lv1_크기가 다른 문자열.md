@@ -28,11 +28,7 @@ public class Solution
 {
     public int solution(string t, string p)
     {
-        List<char> tList = new List<char>();
-        for (int i = 0; i < t.Length; i++)
-        {
-            tList.Add(t[i]);
-        }
+        List<char> tList = t.ToList();
         
         int length = p.Length;
         int answerNumber = 0;

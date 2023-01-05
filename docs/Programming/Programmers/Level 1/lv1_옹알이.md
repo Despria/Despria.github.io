@@ -2,7 +2,7 @@
 sidebar_position: 8
 ---
 
-# Level 1 - 옹알이(2)
+# Level 1 - 옹알이
 
 ## 문제
 
