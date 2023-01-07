@@ -34,3 +34,4 @@ sidebar_position: 1
 [Level1. 콜라 문제](Programmers/Level%201/lv1_%EC%BD%9C%EB%9D%BC%20%EB%AC%B8%EC%A0%9C.md)<br />
 [Level1. 삼총사](Programmers/Level%201/lv1_%EC%82%BC%EC%B4%9D%EC%82%AC.md)<br />
 [Level1. 개인정보 수집 유효기간](Programmers/Level%201/lv1_%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A7%91%20%EC%9C%A0%ED%9A%A8%EA%B8%B0%EA%B0%84.md)<br />
+[Level1. 숫자 짝꿍](Programmers/Level%201/lv1_%EC%88%AB%EC%9E%90%20%EC%A7%9D%EA%BF%8D.md)<br />
