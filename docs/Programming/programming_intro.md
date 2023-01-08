@@ -35,3 +35,4 @@ sidebar_position: 1
 [Level1. 삼총사](Programmers/Level%201/lv1_%EC%82%BC%EC%B4%9D%EC%82%AC.md)<br />
 [Level1. 개인정보 수집 유효기간](Programmers/Level%201/lv1_%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A7%91%20%EC%9C%A0%ED%9A%A8%EA%B8%B0%EA%B0%84.md)<br />
 [Level1. 숫자 짝꿍](Programmers/Level%201/lv1_%EC%88%AB%EC%9E%90%20%EC%A7%9D%EA%BF%8D.md)<br />
+[Level1. 성격 유형 검사하기](Programmers/Level%201/lv1_%EC%84%B1%EA%B2%A9%20%EC%9C%A0%ED%98%95%20%EA%B2%80%EC%82%AC%ED%95%98%EA%B8%B0.md)<br />

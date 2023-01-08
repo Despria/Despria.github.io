@@ -77,7 +77,8 @@ public class Solution
     public int[] solution(string today, string[] terms, string[] privacies)
     {
         List<int> answerList = new List<int>();
-        int index = 1;
+
+        DateTime todayDate = DateTime.Parse(today);
 
         Dictionary<string, int> termValidMonth = new Dictionary<string, int>(); 
         for (int i = 0; i < terms.Length; i++)
@@ -92,8 +93,6 @@ public class Solution
             string[] split = privacies[i].Split(" ");
             privaciesTerm.Add(new Tuple<string, string>(split[0], split[1]));
         }
-
-        DateTime todayDate = DateTime.Parse(today);
 
         for (int i = 0; i < privaciesTerm.Count; i++)
         {
@@ -129,9 +128,8 @@ public class Solution
             DateTime expireDate = DateTime.Parse(dateFormat);
             if (DateTime.Compare(todayDate, expireDate) > 0)
             {
-                answerList.Add(index);
+                answerList.Add(i + 1);
             }
-            index++;
         }
 
         return answerList.ToArray();
@@ -148,6 +146,11 @@ public class Solution
 그러다가 문득 떠오른 것이, 가입 일자가 똑같은데 약관은 다른 사람이 분명 존재할 수 있다.<br/>
 그런데 Dictionary는 중복되는 키값을 허용하지 않기 때문에, 분명히 이쪽에서 문제가 발생했을 거라 생각했다.<br/>
 바로 테스트를 해보니 역시나 이쪽이 문제가 맞았다.
+
+사실 런타임 에러가 두번 떴는데, 처음 뜬 런타임 에러는 DateTime.Parse를 호출할 때 발생한 문제였다.<br/>
+이를테면 0월 0일 같은 건 존재할 수가 없는데, 위의 날짜 계산식에서 실수를 해서 이런 문제가 발생한 적이 있었다.<br/>
+그래서 두번째 런타임 에러도 마찬가지로 저기서 난 오류일거라 생각하고 저 계산식만 들여다보고 있었는데<br/>
+아무리 반례를 떠올리려 해봐도 저 계산식에는 전혀 문제가 없길래 다른데서 오류가 난게 아닐까 싶을때 중복 키값이 떠올랐다.
 
 그래서 처음에 Dictionary로 작성한 privaciesTerm을 List<Tuple<string, string>>형으로 수정하여 문제를 해결할 수 있었다.
 
