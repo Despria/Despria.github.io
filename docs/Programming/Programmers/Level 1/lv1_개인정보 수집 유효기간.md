@@ -147,9 +147,9 @@ public class Solution
 
 그러다가 문득 떠오른 것이, 가입 일자가 똑같은데 약관은 다른 사람이 분명 존재할 수 있다.<br/>
 그런데 Dictionary는 중복되는 키값을 허용하지 않기 때문에, 분명히 이쪽에서 문제가 발생했을 거라 생각했다.<br/>
-그래서 바로 테스트를 해보니 역시나 이쪽이 문제가 맞았다.
+바로 테스트를 해보니 역시나 이쪽이 문제가 맞았다.
 
-그래서 Dictionary는 List<Tuple<string, string>>형으로 살짝 수정하여 문제를 해결할 수 있었다.
+그래서 처음에 Dictionary로 작성한 privaciesTerm을 List<Tuple<string, string>>형으로 수정하여 문제를 해결할 수 있었다.
 
 우선 첫 Dictionary인 termValidMonth는 각 약관별 유효기간을 저장해두었다.<br/>
 그리고 Tuple<string, string>이 담긴 List인 privaciesTerm에는 첫번째 요소에는 가입 일자를, 두번째 요소에는 약관을 저장했다.<br/>
