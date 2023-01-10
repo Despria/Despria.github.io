@@ -39,3 +39,4 @@ sidebar_position: 1
 [Level1. 신고 결과 받기](Programmers/Level%201/lv1_%EC%8B%A0%EA%B3%A0%20%EA%B2%B0%EA%B3%BC%20%EB%B0%9B%EA%B8%B0.md)<br />
 [Level1. 나머지가 1이 되는 수 찾기](Programmers/Level%201/lv1_%EB%82%98%EB%A8%B8%EC%A7%80%EA%B0%80%201%EC%9D%B4%20%EB%90%98%EB%8A%94%20%EC%88%98%20%EC%B0%BE%EA%B8%B0.md)<br />
 [Level1. 최소직사각형](Programmers/Level%201/lv1_%EC%B5%9C%EC%86%8C%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95.md)<br />
+[Level1. 부족한 금액 계산하기](Programmers/Level%201/lv1_%EB%B6%80%EC%A1%B1%ED%95%9C%20%EA%B8%88%EC%95%A1%20%EA%B3%84%EC%82%B0%ED%95%98%EA%B8%B0.md)<br />
