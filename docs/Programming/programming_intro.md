@@ -51,5 +51,7 @@ sidebar_position: 1
 | [Level1. 약수의 개수와 덧셈](Programmers/Level%201/lv1_%EC%95%BD%EC%88%98%EC%9D%98%20%EA%B0%9C%EC%88%98%EC%99%80%20%EB%8D%A7%EC%85%88.md)                                                     | 2023.01.11 |
 | [Level1. 로또의 최고 순위와 최저 순위](Programmers/Level%201/lv1_%EB%A1%9C%EB%98%90%EC%9D%98%20%EC%B5%9C%EA%B3%A0%20%EC%88%9C%EC%9C%84%EC%99%80%20%EC%B5%9C%EC%A0%80%20%EC%88%9C%EC%9C%84.md) | 2023.01.11 |
 | [Level1. 음양 더하기](Programmers/Level%201/lv1_%EC%9D%8C%EC%96%91%20%EB%8D%94%ED%95%98%EA%B8%B0.md)                                                                                          | 2023.01.11 |
+| [Level1. 내적](Programmers/Level%201/lv1_%EB%82%B4%EC%A0%81.md)                                                                                                                               | 2023.01.11 |
+| [Level1. 3진법 뒤집기](Programmers/Level%201/lv1.3%EC%A7%84%EB%B2%95%20%EB%92%A4%EC%A7%91%EA%B8%B0.md)                                                                                        | 2023.01.11 |
 
 </details>
