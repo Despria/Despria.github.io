@@ -57,5 +57,11 @@ sidebar_position: 1
 | [Level1. 체육복](Programmers/Level%201/lv1_%EC%B2%B4%EC%9C%A1%EB%B3%B5.md)                                                                                                                    | 2023.01.12 |
 | [Level1. 모의고사](Programmers/Level%201/lv1_%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC.md)                                                                                                         | 2023.01.13 |
 | [Level1. K번째수](Programmers/Level%201/lv1_K%EB%B2%88%EC%A7%B8%EC%88%98.md)                                                                                                                  | 2023.01.13 |
+| [Level1. 예산](Programmers/Level%201/lv1_%EC%98%88%EC%82%B0.md)                                                                                                                               | 2023.01.13 |
+| [Level1. 소수 만들기](Programmers/Level%201/lv1_%EC%86%8C%EC%88%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)                                                                                          | 2023.01.13 |
+| [Level1. 직사각형 별찍기](Programmers/Level%201/lv1_%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95%20%EB%B3%84%EC%B0%8D%EA%B8%B0.md)                                                                    | 2023.01.13 |
+| [Level1. x만큼 간격이 있는 n개의 숫자](Programmers/Level%201/lv1_x%EB%A7%8C%ED%81%BC%20%EA%B0%84%EA%B2%A9%EC%9D%B4%20%EC%9E%88%EB%8A%94%20n%EA%B0%9C%EC%9D%98%20%EC%88%AB%EC%9E%90.md)        | 2023.01.13 |
+| [Level1. 행렬의 덧셈](Programmers/Level%201/lv1_%ED%96%89%EB%A0%AC%EC%9D%98%20%EB%8D%A7%EC%85%88.md)                                                                                          | 2023.01.13 |
+| [Level1. 핸드폰 번호 가리기](Programmers/Level%201/lv1_%ED%95%B8%EB%93%9C%ED%8F%B0%20%EB%B2%88%ED%98%B8%20%EA%B0%80%EB%A6%AC%EA%B8%B0.md)                                                     | 2023.01.13 |
 
 </details>
