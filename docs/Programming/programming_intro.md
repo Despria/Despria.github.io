@@ -55,5 +55,7 @@ sidebar_position: 1
 | [Level1. 3진법 뒤집기](Programmers/Level%201/lv1.3%EC%A7%84%EB%B2%95%20%EB%92%A4%EC%A7%91%EA%B8%B0.md)                                                                                        | 2023.01.11 |
 | [Level1. 두 개 뽑아서 더하기](Programmers/Level%201/lv1_%EB%91%90%20%EA%B0%9C%20%EB%BD%91%EC%95%84%EC%84%9C%20%EB%8D%94%ED%95%98%EA%B8%B0.md)                                                 | 2023.01.12 |
 | [Level1. 체육복](Programmers/Level%201/lv1_%EC%B2%B4%EC%9C%A1%EB%B3%B5.md)                                                                                                                    | 2023.01.12 |
+| [Level1. 모의고사](Programmers/Level%201/lv1_%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC.md)                                                                                                         | 2023.01.13 |
+| [Level1. K번째수](Programmers/Level%201/lv1_K%EB%B2%88%EC%A7%B8%EC%88%98.md)                                                                                                                  | 2023.01.13 |
 
 </details>
