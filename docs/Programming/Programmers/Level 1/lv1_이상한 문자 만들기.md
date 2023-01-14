@@ -19,6 +19,8 @@ sidebar_position: 45
 ## 풀이
 
 ```c#
+using System.Text;
+
 public string solution(string s)
 {
     string[] words = s.Split(' ');

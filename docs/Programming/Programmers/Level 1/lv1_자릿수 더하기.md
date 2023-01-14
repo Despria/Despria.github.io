@@ -16,6 +16,8 @@ sidebar_position: 44
 ## 풀이
 
 ```c#
+using System;
+
 public int solution(int n)
 {
     int answer = 0;

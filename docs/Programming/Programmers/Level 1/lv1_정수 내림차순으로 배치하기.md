@@ -17,6 +17,10 @@ n의 각 자릿수를 큰것부터 작은 순으로 정렬한 새로운 정수�
 ## 풀이
 
 ```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 public class Solution
 {
     public long solution(long n)
