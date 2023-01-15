@@ -43,3 +43,25 @@ public class Solution
 ```
 
 해결 일자 - 2023.01.14
+
+```c#
+using System;
+using System.Collections.Generic;
+
+public class Solution {
+    public int[] solution(long n)
+    {
+        List<int> number = new List<int>();
+        string num = n.ToString();
+
+        for (int i = num.Length - 1; i >= 0; i--)
+        {
+            number.Add(num[i] - 48);
+        }
+
+        return number.ToArray();
+    }
+}
+```
+
+이렇게 하면 조금 더 효율적이다.
