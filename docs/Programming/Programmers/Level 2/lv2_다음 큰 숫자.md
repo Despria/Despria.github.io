@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Level 2 - 다음 큰 숫자
 
 ## 문제
