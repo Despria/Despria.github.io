@@ -97,7 +97,9 @@ sidebar_position: 1
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|------------|
 | [Level2. 올바른 괄호](Programmers/Level%202/lv2_%EC%98%AC%EB%B0%94%EB%A5%B8%20%EA%B4%84%ED%98%B8.md)                                                                                            | 2023.01.15 |
 | [Level2. 다음 큰 숫자](Programmers/Level%202/lv2_%EB%8B%A4%EC%9D%8C%20%ED%81%B0%20%EC%88%AB%EC%9E%90.md)                                                                                        | 2023.01.15 |
-| [Level2. 멀리 뛰기](Programmers/Level%202/lv2_%EB%A9%80%EB%A6%AC%20%EB%9B%B0%EA%B8%B0.md)                                                                                                       | 2023.01.15 |
-| [Level2. 최댓값과 최솟값](Programmers/Level%202/lv2_%EC%B5%9C%EB%8C%93%EA%B0%92%EA%B3%BC%20%EC%B5%9C%EC%86%9F%EA%B0%92.md)                                                                      | 2023.01.15 |
+| [Level2. 멀리 뛰기](Programmers/Level%202/lv2_%EB%A9%80%EB%A6%AC%20%EB%9B%B0%EA%B8%B0.md)                                                                                                       | 2023.01.16 |
+| [Level2. 최댓값과 최솟값](Programmers/Level%202/lv2_%EC%B5%9C%EB%8C%93%EA%B0%92%EA%B3%BC%20%EC%B5%9C%EC%86%9F%EA%B0%92.md)                                                                      | 2023.01.16 |
+| [Level2. 최솟값 만들기](Programmers/Level%202/lv2_%EC%B5%9C%EC%86%9F%EA%B0%92%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)                                                                                 | 2023.01.17 |
+| [Level2. 피보나치 수](Programmers/Level%202/lv2_%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%20%EC%88%98.md)                                                                                            | 2023.01.17 |
 
 </details>
