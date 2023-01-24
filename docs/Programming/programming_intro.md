@@ -101,5 +101,7 @@ sidebar_position: 1
 | [Level2. 최댓값과 최솟값](Programmers/Level%202/lv2_%EC%B5%9C%EB%8C%93%EA%B0%92%EA%B3%BC%20%EC%B5%9C%EC%86%9F%EA%B0%92.md)                                                                      | 2023.01.16 |
 | [Level2. 최솟값 만들기](Programmers/Level%202/lv2_%EC%B5%9C%EC%86%9F%EA%B0%92%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)                                                                                 | 2023.01.17 |
 | [Level2. 피보나치 수](Programmers/Level%202/lv2_%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%20%EC%88%98.md)                                                                                            | 2023.01.17 |
+| [Level2. 행렬의 곱셈](Programmers/Level%202/lv2_%ED%96%89%EB%A0%AC%EC%9D%98%20%EA%B3%B1%EC%85%88.md)                                                                                            | 2023.01.24 |
+| [Level2. JadenCase 문자열 만들기](Programmers/Level%202/lv2_JadenCase%20%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)                                                           | 2023.01.24 |
 
 </details>
